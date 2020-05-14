@@ -1,0 +1,19 @@
+{
+    "name": "zf/requestmailer",
+    "description": "Send an email via HtppRquest",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "authors": [
+        {
+            "name": "Vlad Nicu",
+            "email": "vlad.nicu@zf.com"
+        }
+    ],
+	 "autoload": {
+            "psr-4": {
+                "zf\\requestmailer\\": "src/"
+            }
+        }
+}
