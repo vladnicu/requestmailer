@@ -1,5 +1,5 @@
 {
-    "name": "VladNicu/RequestMailer",
+    "name": "vlad-nicu/request-mailer",
     "description": "Send an email via HtppRquest",
     "type": "library",
     "require": {
