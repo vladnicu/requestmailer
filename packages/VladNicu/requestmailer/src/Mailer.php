@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Log;
 
 class Mailer
 {
-    public static function sendMail($to, $subject, $body) {
+    public static function sendMail($mailApiUrl, $to, $subject, $body) {
 
         $emailData = [
             'name' => 'TEC Portal',
@@ -25,9 +25,7 @@ class Mailer
         
         try {
 
-            dd(env('MAIL_API_URL'));
-
-            $promis = $client->requestAsync('POST', env('MAIL_API_URL'), [
+            $promis = $client->requestAsync('POST', $mailApiUrl, [
                 'headers' => ['Content-Type' => 'application/json'],
                 'connect_timeout' => 0.5,//set timeout 
                 'body' => json_encode($emailData)

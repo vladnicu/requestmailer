@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use VladNicu\RequestMailer\Mailer;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('testmail', function($email) {
+    Mailer::sendMail(env('MAIL_API_URL'), [$email], 'You have been added to a group!', 'Hello');
+});
+
